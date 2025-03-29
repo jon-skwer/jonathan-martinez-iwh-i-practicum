@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= title
+    body
+        a(href="/update-cobj") Add to this table
+        h1= title
+        table(border="1")
+            thead
+                tr
+                    th Pet Name
+                    th Pet Type
+                    th Pet Age
+            tbody
+                each obj in data
+                    tr
+                        td= obj.properties.pet_name
+                        td= obj.properties.pet_type
+                        td= obj.properties.pet_age
+        br
+        a(href="/update-cobj") Add New CRM Record
