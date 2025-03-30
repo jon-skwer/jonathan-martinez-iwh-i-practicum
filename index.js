@@ -7,8 +7,9 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PRIVATE_APP_ACCESS = process.env.HUBSPOT_API_KEY;
+require('dotenv').config();
 
+const PRIVATE_APP_ACCESS = process.env.HUBSPOT_API_KEY;
 const CUSTOM_OBJECT_TYPE_ID = "2-42601412";
 // * Please DO NOT INCLUDE the private app access token in your repo. Don't do this practicum in your normal account.
 
